@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  --sky-blue: #87ceeb;
+  --cloud-white: #ffffff;
+  --mario-red: #ff0000;
+  --luigi-green: #3c00ff;
+  --yoshi-egg-blue: #00ffff;
+  --bowser-yellow: #ffa600;
+  --star-yellow: #ffd700;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+  background-color: var(--sky-blue);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.cloud {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  background-color: var(--cloud-white);
+  border-radius: 50px;
+  animation: moveCloud linear infinite;
+  opacity: 0.7;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background-color: var(--cloud-white);
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 10px;
+}
+
+.cloud::after {
+  width: 80px;
+  height: 80px;
+  top: -35px;
+  right: 15px;
+}
+
+.cloud:nth-child(1) {
+  top: 10%;
+  animation-duration: 60s;
+}
+
+.cloud:nth-child(2) {
+  top: 30%;
+  animation-duration: 75s;
+  animation-delay: -20s;
+}
+
+.cloud:nth-child(3) {
+  top: 50%;
+  animation-duration: 90s;
+  animation-delay: -45s;
+}
+
+@keyframes moveCloud {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(calc(100vw + 200px));
+  }
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  width: 90%;
+  z-index: 10;
+}
+
+h1 {
+  color: var(--mario-red);
+  text-shadow: 2px 2px var(--bowser-yellow);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: var(--luigi-green);
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  font-family: "Press Start 2P", cursive;
+  padding: 10px;
+  width: 60%;
+  border: 2px solid var(--yoshi-egg-blue);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  font-family: "Press Start 2P", cursive;
+  padding: 10px 20px;
+  background-color: var(--mario-red);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: var(--bowser-yellow);
+}
+
+select {
+  font-family: "Press Start 2P", cursive;
+  padding: 10px;
+  border: 2px solid var(--yoshi-egg-blue);
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 2px solid var(--luigi-green);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+ul li {
+  padding: 10px;
+  border-bottom: 1px solid var(--yoshi-egg-blue);
+  font-size: 14px;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.team {
+  border: 2px dashed var(--mario-red);
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Stili per le macchine da corsa */
+.kart {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background-color: #ff6200;
+  border-radius: 10px;
+  animation: moveKart 10s linear infinite;
+}
+
+.kart::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--bowser-yellow);
+  border-radius: 50%;
+}
+
+.kart::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #333;
+  border-radius: 50%;
+  box-shadow: 35px 0 0 #333;
+}
+
+.kart-1 {
+  top: 80%;
+  background-color: #ff0000;
+  animation-delay: 0s;
+}
+.kart-2 {
+  top: 85%;
+  background-color: #3c00ff;
+  animation-delay: -2.5s;
+}
+.kart-3 {
+  top: 90%;
+  background-color: #ffa600;
+  animation-delay: -5s;
+}
+.kart-4 {
+  top: 95%;
+  background-color: aqua;
+  animation-delay: -7.5s;
+}
+
+@keyframes moveKart {
+  0% {
+    left: -60px;
+  }
+  100% {
+    left: calc(100% + 60px);
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  input[type="text"],
+  button,
+  select {
+    font-size: 12px;
+  }
+
+  ul li {
+    font-size: 12px;
+  }
+}

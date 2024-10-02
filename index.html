@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorteggio Torneo Mario Kart</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+
+    <!-- Aggiungiamo le stelle -->
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+
+    <div class="container">
+      <h1>Mario Kart Mundialito</h1>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="participantName"
+          placeholder="Nome Partecipante"
+        />
+        <button id="addParticipant">Aggiungi</button>
+      </div>
+
+      <h2>Partecipanti Aggiunti:</h2>
+      <ul id="participantList"></ul>
+
+      <div>
+        <label for="numberOfTeams">Numero di Squadre (2-4):</label>
+        <select id="numberOfTeams">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+
+      <button id="drawButton">Sorteggia!</button>
+
+      <div id="result" class="result">
+        <h2>Squadre Sorteggiate:</h2>
+        <div id="teamsContainer"></div>
+      </div>
+    </div>
+
+    <!-- Aggiungiamo le macchine da corsa -->
+    <div class="kart kart-1"></div>
+    <div class="kart kart-2"></div>
+    <div class="kart kart-3"></div>
+    <div class="kart kart-4"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
