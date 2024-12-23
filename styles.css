@@ -49,8 +49,8 @@ input[type="text"] {
 
 button {
   padding: 10px 20px;
-  background-color: #b00101;
-  color: white;
+  background-color: white;
+  color: #b00101;
   border: none;
   border-radius: 5px;
   cursor: pointer;
