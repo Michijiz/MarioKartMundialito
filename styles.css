@@ -2,8 +2,8 @@
 body {
   margin: 0;
   color: rgb(22, 10, 0);
-  padding: 20px;
-  min-height: 100vh;
+  padding: 0px;
+  min-height: 0vh;
   background: linear-gradient(to bottom, #1a94ff, #00ff91);
   font-family: "Press Start 2P", cursive;
   overflow-x: hidden;
@@ -14,7 +14,7 @@ body {
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   background-color: rgba(0, 123, 255, 0.9);
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -25,11 +25,12 @@ body {
 /* Titolo */
 h1 {
   text-align: center;
-  color: #ea0d0d;
-  text-shadow: 2px 2px #000;
+  color: transparent;
+  text-shadow: 2px 2px #f5e504, -2px 2px #f45207, -3px -3px #891aff,
+    5px -5px #3300ff;
 
   margin-bottom: 30px;
-  font-size: 2em;
+  font-size: 5em;
 }
 
 /* Input e pulsanti */
@@ -61,7 +62,7 @@ button {
 
 button:hover {
   transform: scale(1.05);
-  background-color: #8b0303;
+  background-color: #eae603;
 }
 
 /* Lista partecipanti */
