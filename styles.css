@@ -148,13 +148,14 @@ select {
   }
 }
 /* Fondo pagina */
+
+
 .game-scene {
   position: relative;
   width: 100vw;
   height: 100vw;
   
 }
-  
   
   .pipe {
   position: absolute
@@ -163,6 +164,7 @@ select {
   width: 20vh;
   left: 100px
   background-color: green;
+  }
   
   
 
