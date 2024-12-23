@@ -27,6 +27,7 @@ h1 {
   text-align: center;
   color: #ea0d0d;
   text-shadow: 2px 2px #000;
+
   margin-bottom: 30px;
   font-size: 2em;
 }
@@ -49,8 +50,8 @@ input[type="text"] {
 
 button {
   padding: 10px 20px;
-  background-color: #b00101;
-  color: white;
+  background-color: white;
+  color: #b00101;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -72,7 +73,7 @@ button:hover {
 #participantList li {
   padding: 10px;
   margin: 5px 0;
-  background-color: #d5fa04;
+  background-color: yellow;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -116,7 +117,7 @@ select {
   margin: 20px 0;
   background: transparent;
   z-index: 0;
-  top: 50%;
+  top: 30%;
   left: 0;
   transform: translateY(-50%);
 }
@@ -146,6 +147,21 @@ select {
   100% {
     transform: translateX(calc(100vw + 300px)) scale(0.8); /* Finisce fuori dallo schermo */
   }
+}
+/* Fondo pagina */
+
+.game-scene {
+  position: relative;
+  width: 100vw;
+  height: 100vw;
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  height: 50vh;
+  width: 20vh;
+  left: 100px background-color green;
 }
 
 /* Nuvole */
