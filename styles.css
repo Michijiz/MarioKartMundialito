@@ -147,6 +147,25 @@ select {
     transform: translateX(calc(100vw + 300px)) scale(0.8); /* Finisce fuori dallo schermo */
   }
 }
+/* Fondo pagina */
+.game-scene {
+  position: relative;
+  width: 100vw;
+  height: 100vw;
+  
+}
+  
+  
+  .pipe {
+  position: absolute
+  bottom: 0;
+  height: 50vh;
+  width: 20vh;
+  left: 100px
+  background-color: green;
+  
+  
+
 
 /* Nuvole */
 .cloud {
