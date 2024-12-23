@@ -72,7 +72,7 @@ button:hover {
 #participantList li {
   padding: 10px;
   margin: 5px 0;
-  background-color: #d5fa04;
+  background-color: yellow;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
