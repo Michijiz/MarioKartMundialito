@@ -116,7 +116,7 @@ select {
   margin: 20px 0;
   background: transparent;
   z-index: 0;
-  top: 50%;
+  top: 30%;
   left: 0;
   transform: translateY(-50%);
 }
